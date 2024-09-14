@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script src="task1.js" defer></script>
+   <script src="task2.js" defer></script>
+</head>
+
+<body>
+   <p id="result"></p>
+   <script>
+      //task 1 part a)
+      let number = prompt("Enter a number:");
+      document.getElementById("result").textContent = "The number you entered: " + number;
+   </script>
+
+   <script>
+      //task 1 part b)
+      let numPercentage = parseInt(prompt("Enter a percentage:"));
+      let percentage = (numPercentage / number) * 100;
+      document.getElementById("result").textContent = `The percentage of the number you entered:  ${percentage} `;
+   </script>
+
+   <script>
+      // task 2 
+      let displayStr = "";
+      let points = prompt("Please enter exam points value:")
+      //(a)
+      let ifStr = "";
+      if (points > 90)
+         ifStr = "A";
+      else if (points > 80)
+         ifStr = "B"
+      else if (points > 70)
+         ifStr = "C"
+      else if (points > 60)
+         ifStr = "D"
+
+
+      else
+         ifStr = "F"
+
+      //(b)
+      let switchStr = "";
+      switch (true) {
+         case points > 90:
+            switchStr = "switch: A";
+            break;
+         case points > 80:
+            switchStr = "switch: B";
+            break;
+         case points > 70:
+            switchStr = "switch: C";
+            break;
+         case points > 60:
+            switchStr = "switch: D";
+            break;
+
+
+         default:
+            switchStr = "F"
+      }
+      document.getElementById("result").textContent = `The grade is (a)  ${ifStr} (b) ${switchStr}`;
+   </script>
+
+
+
+   <script>
+      //task 3
+      let professor = prompt("Who are the lines for?");
+      let lineToWrite = prompt("What is the line?");
+      let numberOfLines = prompt("How many lines?")
+
+      for (let line = 1; line < 101; line++) {
+         console.log("I must not tell lies");
+      }
+   </script>
+
+   <ul id="line"></ul>
+   <script>
+      //task 4
+
+      while (counter < 100) {
+         for (const item of list) {
+            const listItem = document.createElement("li");
+            listItem.textContent = item;
+            myList.appendChild(listItem);
+         }
+         counter++;
+      }
+   </script>
+
+   <script>
+      //task 5
+      const lineWriter = (numberOfLines) => {
+         let task5_str = "<ul>";
+         for (let line = 1; line <= numberOfLines; line++) {
+            task5_str += `<li>${line} ${lineToWrite}</li>`;
+         }
+         task5_str += "</ul>";
+         returntask5_str;
+      }
+
+      const meanProfessorTitler = function (professor) {
+         return ('<h1>${professor}</h1>');
+      }
+
+      let refToTask5Div = document.querySelector(#task4);
+      reftToTask5Div.innerhtml
+
+   </script>
+
+   <script>
+      //task 6 time tables 1-12
+      let firstFactor = 1;
+      let secondFactor = 1;
+
+      let displayStr = "";
+      for (firstFactor = 1; firstFactor <= 12; firstFactor++) {
+         for (secondFactor = 1; secondFactor <= 12; secondFactor++) {
+            let product = firstFactor * secondFactor;
+            displayStr += `${firstFactor} X ${secondFactor} = ${product}
+              <br>`
+         }
+      }
+      displayStr += "<br>---------<br>"
+
+      let refToDisplay = document.querySelector(".tables")
+      refToDisplay.innerHTML = displayStr;
+
+      const timeTables = (firstFactor) => {
+         for (secondFactor = 1; secondFactor <= 12; secondFactor++) {
+            let product = firstFactor * secondFactor;
+            displayStr += `${firstFactor} X ${secondFactor} = ${product}
+              <br>`
+         }
+         displayStr += "<br>---------<br>"
+         return displayStr;
+
+      }
+      letfullDisplayStr = "";
+      for (firstFactor = 1; firstFactor <= 12; firstFactor++);
+
+
+
+
+   </script>
+
+   <script>
+      // Task 7
+
+      // a) Hoisting allows you to use a function in the code before its declared in the code.
+      // b) The variables in hoisting is moved to the top of the scope before the code.
+
+      //Hoisting with a function
+
+      greetings(); 
+
+      function greetings() {
+         console.log("Hi, how are you?");
+      }
+
+      // Hoisting with a variable
+      console.log(num);
+      let num = 22
+
+
+      //The ECMA standards resolved the issue of hoisting by providing guidelines and having block level of scoping options
+      // and have some not initialized.
+   </script>
+</body>
+
+</html>
